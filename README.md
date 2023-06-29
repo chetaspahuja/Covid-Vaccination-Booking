@@ -48,8 +48,10 @@ The application provides a convenient booking process for users:
 To ensure secure access to the application's admin features and functionalities, an admin authentication system is implemented:
 
 - **Login**: Admins are required to log in using their unique username and password credentials. This authentication system ensures that only authorized individuals can access and manage the vaccination center data.
-
   
+
+![login2](https://github.com/chetaspahuja/Covid-Vaccination-Booking/assets/75940206/0e496469-b53f-4fd1-b7e1-2bcf88cc8639)
+
   
 ![login3](https://github.com/chetaspahuja/Covid-Vaccination-Booking/assets/75940206/c74b25b2-4098-438d-8b60-f6995f6e5d10)
 
