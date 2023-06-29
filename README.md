@@ -18,28 +18,20 @@ This is a COVID-19 Vaccination Management Application that provides features for
    - Admins can delete a vaccination center from the list.
    - Admins can add a new vaccination center to the list.
 
-   Code Snippet: [admin_home.html](/path/to/admin_home.html)
-
 2. **User Booking**
 
    - Users can select a date to view the available vaccination centers and their slots for that date.
    - Users can book a slot at their preferred vaccination center.
-
-   Code Snippet: [selectDate.html](/path/to/selectDate.html), [booking.html](/path/to/booking.html)
 
 3. **Admin Authentication and Logout**
 
    - Admins can log in to the application using their username and password.
    - Admins can log out of the application.
 
-   Code Snippet: [login.html](/path/to/login.html)
-
 4. **Updating Slots for Vaccination Centers**
 
    - Admins can update the number of available slots for a specific vaccination center and date.
    - If the record for the given date doesn't exist, a new record will be created.
-
-   Code Snippet: [update_slots.html](/path/to/update_slots.html)
 
 ## License
 
