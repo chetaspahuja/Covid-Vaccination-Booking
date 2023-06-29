@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vaccination Centers</title>
+</head>
+
+<body>
+    <h1>Vaccination Centers</h1>
+
+    <table>
+        <tr>
+            <th>Center Name</th>
+            <th>Name of Person</th>
+            <th>Number of Slots Available</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+
+        {% for center in centers %}
+        <tr>
+            <td>{{ center.center_name }}</td>
+            <td>{{ center.name }}</td>
+            <td>{{ center.empty_slots }}</td>
+            <td>{{ center.center_address }}</td>
+            <td>
+                <form>
+                <form action="{% url 'delete_center' center.centre_name %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

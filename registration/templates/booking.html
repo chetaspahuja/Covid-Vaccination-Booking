@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<h2 style="text-align: center;">Vaccination Centers</h2>
+
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="padding: 10px; border: 1px solid #ddd;">Name</th>
+      <th style="padding: 10px; border: 1px solid #ddd;">Center Name</th>
+      <th style="padding: 10px; border: 1px solid #ddd;">Address</th>
+      <th style="padding: 10px; border: 1px solid #ddd;">Empty Slots</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for center in centers %}
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd;">{{ center.name }}</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">{{ center.centre_name }}</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">{{ center.center_address }}</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">{{ center.empty_slots }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<br><br><br>
+
+<body>
+  <div class="container">
+    <h1>REGISTRATION FORM</h1>
+
+    <form action="/home/booking/something" method="post">
+      {% csrf_token %}
+      <label for="name">NAME:</label>
+      <input type="text" name="name" id="name" placeholder="Enter Your Name" required><br><br>
+
+      <label for="age">AGE:</label>
+      <input type="number" name="age" id="age" placeholder="Enter Age" required><br><br>
+
+      <label for="email_id">EMAIL ID:</label>
+      <input type="email" name="email_id" id="email_id" placeholder="Enter your Email ID" required><br><br>
+
+      <label for="mnumber">MOBILE NUMBER:</label>
+      <input type="number" name="mnumber" id="mnumber" placeholder="Enter Mobile Number" required><br><br>
+
+      <label for="sex">SEX:</label>
+      <input type="text" name="sex" id="sex" placeholder="Enter your Sex" required><br><br>
+
+      <label for= "center_name">CENTER NAME</label>
+      <input type = "text" name = "center_name" id = "center_name" placeholder="Enter the name of the center" required> 
+
+      <label for= "center_name">CENTER NAME</label>
+      <input type = "text" name = "center_name" id = "center_name" placeholder="Enter the name of the center" required> 
+
+      <button class="btn btn-primary">SUBMIT</button>
+    </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>COVID-19 Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: antiquewhite;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      text-decoration: underline;
+    }
+    
+    .info {
+      margin-bottom: 20px;
+    }
+    
+    .info h2 {
+      margin-top: 0;
+    }
+    
+    .info p {
+      line-height: 1.5;
+    }
+    
+    .guidelines {
+      /* text-align: center; */
+      margin-bottom: 20px;
+    }
+    
+    .guidelines img {
+      max-width: 100%;
+      height: auto;
+      border: 3px solid black;
+    }
+    
+    .header {
+      padding: 20px;
+      text-align: right;
+      /* background-color: rgb(35, 138, 193);
+      height: 50px; */
+      
+    }
+    .header a{
+      text-decoration: none;
+      color: black;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    }
+    .header a:hover{
+      color: red;
+    }
+    .info img{
+      max-width: 80%;
+      height: 100%;
+      border: 3px solid black;
+      
+
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href= "{% url 'test' %}">Book a Vaccine</a> | <a href="{% url 'login' %}" class="btn btn-primary">Logout</a>
+  </div>
+  <div class="container">
+    <h1>COVID-19 </h1>
+    
+    <div class="info">
+      <h2>About COVID-19</h2>
+      <p>
+        Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.
+Most people infected with the virus will experience mild to moderate respiratory illness and recover without requiring special treatment. However, some will become seriously ill and require medical attention. Older people and those with underlying medical conditions like cardiovascular disease, diabetes, chronic respiratory disease, or cancer are more likely to develop serious illness. Anyone can get sick with COVID-19 and become seriously ill or die at any age. 
+      </p>
+     <center><img src="https://www.paho.org/sites/default/files/styles/max_1500x1500/public/2023-05/covid-19-virus-blue.jpg?itok=tDu0OGCa" alt="General Information"></center> 
+    </div>
+    
+    <div class="guidelines">
+      <h2>Government Guidelines</h2>
+      <p>
+        Here are some important guidelines provided by the government to prevent the spread of COVID-19:
+      </p>
+      <ul>
+        <li>Wear a mask in public places.</li>
+        <li>Maintain social distancing of at least 1 meter.</li>
+        <li>Wash your hands frequently with soap and water for at least 20 seconds.</li>
+        <li>Avoid touching your face, especially your eyes, nose, and mouth.</li>
+        <li>Cover your mouth and nose with your elbow or a tissue when coughing or sneezing.</li>
+        <li>Stay home if you feel unwell and seek medical attention if necessary.</li>
+      </ul>
+      <center><img src="https://scontent.fdel3-1.fna.fbcdn.net/v/t1.6435-9/188136690_1459324467751130_2464906475961010852_n.jpg?stp=cp0_dst-jpg_e15_q65_s480x480&_nc_cat=100&ccb=1-7&_nc_sid=8024bb&_nc_ohc=lu_zMe7HbPEAX80Y0Me&_nc_ht=scontent.fdel3-1.fna&oh=00_AfD-a58I5-n2oykQeIrVL8GeK7_By86T1Pr2EKXQmgSXXg&oe=64C3B453" alt="Government Guidelines"></center>
+    </div>
+    
+    
+  </div>
+</body>
+</html>
